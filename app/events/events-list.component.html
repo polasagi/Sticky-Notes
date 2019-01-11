@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6 ">
+      <Label>All Notes</Label>
+  </div>
+  <div class="col-md-3"></div>
+
+  <div class="col-md-3">
+    <Label style="padding-right:10px">FilterBy</Label>
+    <input type='text' [(ngModel)]='listFilter'>
+  </div>
+</div>
+<hr />
+
+
+<div *ngFor="let event of filteredEvents" class="col-md-3">
+  <app-eventthumbnail [event]="event" (checked)="onNoteChecked(i)"> </app-eventthumbnail>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <img [src]="event?.imageUrl" [alt]="event?.name" class="event-image">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{event?.title}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <p>{{event?.body}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-6">
+          <strong>Category:</strong><br />
+        <p>{{event?.category}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Created Date:</strong><br />
+          <p>{{event?.date}}</p>
+        </div>
+      </div>
+
+
+</div>

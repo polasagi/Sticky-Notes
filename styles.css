@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+ /* @import "~ngf-bootstrap/dist/bootstrap.min.css";*/
+ @import "~bootstrap/dist/css/bootstrap.min.css";
+ @import "~material-icons/iconfont/material-icons.css";
+ @import "~open-iconic/font/css/open-iconic-bootstrap.min.css";
+ @import "~font-awesome/css/font-awesome.min.css";
+
+
+/* You can add global styles to this file, and also import other style files */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e7e7e7;
+  color: #777;
+  text-align: center;
+  padding-left: 50px;
+}
+body{
+  background-color: #ffffff;}
+
+.hoverwell:hover {
+  background-color: #yellow;
+  cursor: pointer;
+}
+
+/*.container {
+  padding-top: 10px;
+} */
+
+.pointable {
+  cursor: pointer;
+}
+
+button {
+  color: #555;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.toast-success {
+  background-color: #51a351;
+}
+.toast-error {
+  background-color: #bd362f;
+}
+.toast-info {
+  background-color: #2f96b4;
+}
+.toast-warning {
+  background-color: #f89406;
+}
+
+

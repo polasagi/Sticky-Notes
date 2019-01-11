@@ -1,0 +1,53 @@
+<!-- <li class="well hoverwell thumbnail" style="padding:0%" [ngStyle]="{ 'background-color': event.color }">
+  <div class="row">
+    <div class="col-md-1" style="float:right; padding-right:30px; color:#FFFFFF">
+      <div class="icon" (click)="onChecked()" style="color:#FFFFFF">
+        <i class="material-icons"> color_lens</i>
+      </div>
+    </div>
+
+    <div class="col-md-1" style="float:right; color:#FFFFFF">
+      <div class="icon" (click)="onChecked()" style="color:#FFFFFF">
+        <i class="material-icons">check</i>
+      </div>
+
+    </div>
+    <div class="col-md-1" style="float:right; ">
+      <div class="icon" (click)="onChecked()" style="color:#FFFFFF">
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h5 style="font-family:Reenie Beanie,arial,sans-serif;font-size:180%;padding:0%">{{event.title}}</h5>
+  </div>
+  <div style="font-family:Reenie Beanie,arial,sans-serif;font-size:180%;padding:0%" [routerLink]="['/notes',event.id]">
+    <p> {{event.body}} </p>
+  </div>
+
+
+
+</li> -->
+
+<div class="note-card row shadow-1" [ngStyle]="{ 'background-color': event.color }" (mouseleave)="toggleCheck()"
+  (mouseenter)="toggleCheck()">
+  <div class="row" style=" padding-bottom: 15px;" *ngIf="showCheck">
+
+    <div class="icon" (click)="onDelete()" style=" padding-right: 30px;">
+      <i class="material-icons">delete_outline</i>
+    </div>
+
+    <div class="icon" (click)="onFav()" style="padding-right: 15px;" [ngStyle]="{'color' : event.pinned === true ?
+  '#ff1a1a' : '#000000'}">
+        <i class="fa fa-heart-o"></i>
+        <!-- <i class="fas fa-heart"></i> -->
+    </div>
+  </div>
+  <div class="col-xs-8 title" [routerLink]="['/notes',event.id]">
+    {{ event.title }}
+  </div>
+  <div class="col-xs-12 value" [routerLink]="['/notes',event.id]">
+    {{ event.body }}
+  </div>
+</div>
